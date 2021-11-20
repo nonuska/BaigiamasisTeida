@@ -14,7 +14,7 @@ namespace BaigiamasisTeida.Test
         public static TeidaPrisijungtiPage2 _teidaPrisijungtiPage2;
         public static TeidaManoPaskyraPage3 _teidaManoPaskyraPage3;
 
-        public static AlertPage _alertPage;
+      // public static AlertPage _alertPage;
 
 
 

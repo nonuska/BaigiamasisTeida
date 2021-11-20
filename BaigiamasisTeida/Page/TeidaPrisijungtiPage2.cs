@@ -41,11 +41,12 @@ namespace BaigiamasisTeida.Page
             return this;
         }
 
-        public TeidaPrisijungtiPage2 InsertElPastasAndSlaptazodis(string elPastas, string slaptazodis)
+        public TeidaPrisijungtiPage2 PrisijungtiElPastasAndSlaptazodis(string elPastas, string slaptazodis)
         {
             InsertElPastas(elPastas);
             InsertSlaptazodis(slaptazodis);
-                return this;
+           
+            return this;
         }
 
         public TeidaPrisijungtiPage2 ClickButtonPrisijungti()
@@ -55,13 +56,7 @@ namespace BaigiamasisTeida.Page
         }
 
 
-        // KAIP TA ASSERT PARASYTI
-         public TeidaPrisijungtiPage2 CheckButtonPsisijungti() 
-         {
-
-            Assert.AreEqual(ButtonPrisijungti, ButtonPrisijungti.Text, "neprijungia mano paskyra, nekreikia i kita psl");
-             return this;
-          }
+        
         
     }
         

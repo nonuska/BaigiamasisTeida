@@ -1,4 +1,5 @@
-﻿using OpenQA.Selenium;
+﻿using NUnit.Framework;
+using OpenQA.Selenium;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,16 +12,15 @@ namespace BaigiamasisTeida.Page
 
     {
         private const string PageAddressPagrindinis = "https://www.teida.lt/";
-        private IWebElement ButtonPrisijungti => Driver.FindElement(By.Id("prisijungti"));
-        
-        // private IWebElement PopUp => Driver.FindElement(By.Id("___$_11__close ___$_11__close"));
+        private IWebElement ButtonPagrindinisPrisijungti => Driver.FindElement(By.Id("prisijungti"));
+       // private IWebElement registruotas =>Driver.FindElement(By.Id("registerLink"));
+        // private IWebElement Cookies => Driver.FindElement(By.Id("___$_11__close ___$_11__close"));
 
         //private IWebElement LaukeliIrasyti => Driver.FindElement(By.Id("searchParam"));
         //private IWebElement PrekesPaieska => Driver.FindElement(By.Id("search_icon"));
-        public TeidaPagrindinisPage1(IWebDriver webdriver) : base(webdriver)
-        {
-           
-        }
+        public TeidaPagrindinisPage1(IWebDriver webdriver) : base(webdriver)   //kontruktorius
+         { }  
+        
         public TeidaPagrindinisPage1 NavigateToDefaultPage()
         {
             if (Driver.Url != PageAddressPagrindinis)
@@ -28,18 +28,36 @@ namespace BaigiamasisTeida.Page
             return this;
         }
 
-        /*public TeidaPagrindinisPage1 ClosePopUp()
+        /*ARBA TAIP
+         public void TeidaPagrindinisPage1 ClickCookiesSutinku()
         {
-            PopUp.Click();
-            return this;
-        }*/
-        
-        public TeidaPagrindinisPage1 ClickButtonPrisijungti()
-        {
-            ButtonPrisijungti.Click();
+           Cookies.Click();
             return this;
         }
 
+        /*public TeidaPagrindinisPage1 AcceptCookie()
+        {
+           Cookie myCookie = new Cookie("Cookiesent", "{"www.teida.lt", "/"
+        DateTime
+        Driver.Manage().Cookies.AddCookie(myCookie);
+        Driver.Navigate().Refresh();
+         return this;
+
+        }*/
+
+        public TeidaPagrindinisPage1 ClickButtonPagrindinisPrisijungti()
+        {
+            ButtonPagrindinisPrisijungti.Click();
+            return this;
+        }
+        // KAIP TA ASSERT PARASYTI
+       /* public TeidaPagrindinisPage1 CheckButtonPsisijungti()
+        {
+
+            Assert.IsTrue(ButtonPagrindinisPrisijungti.Text.Contains(expectedResult), "Nepavyko prisijungti");
+            return this;
+        }
+       */
 
 
 
