@@ -10,7 +10,7 @@ namespace BaigiamasisTeida.Page
     public class TeidaManoPaskyraPage3 : BasePage
     {
         public const string PageAddressManoPaskyra = "https://www.teida.lt/index.php?force_sid=j89335da10gek1vv7a4446vof6&";
-     
+       private IWebElement ButtonAtsijungti => Driver.FindElement(By.Id("prisijungti"));
 
         private IWebElement ManoPaskyra => Driver.FindElement(By.CssSelector("#content > div.catTitleContent.bold"));
 
@@ -24,8 +24,10 @@ namespace BaigiamasisTeida.Page
             return this;
         }
 
-
-
-
+         public TeidaManoPaskyraPage3 ClickButtonAtsijungti()
+         {
+             ButtonAtsijungti.Click();
+             return this;
+         }
     }
 }

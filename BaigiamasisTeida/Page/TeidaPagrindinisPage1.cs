@@ -51,18 +51,26 @@ namespace BaigiamasisTeida.Page
             return this;
         }
         // KAIP TA ASSERT PARASYTI
-       /* public TeidaPagrindinisPage1 CheckButtonPsisijungti()
+        /* public TeidaPagrindinisPage1 CheckButtonPsisijungti()
+         {
+
+             Assert.IsTrue(ButtonPagrindinisPrisijungti.Text.Contains(expectedResult), "Nepavyko prisijungti");
+             return this;
+         }
+        */
+
+       /* public TeidaPagrindinisPage1 CheckButtonAtsijungti()
         {
 
-            Assert.IsTrue(ButtonPagrindinisPrisijungti.Text.Contains(expectedResult), "Nepavyko prisijungti");
+            OpenTeidaManoPaskyraPage3();
+            ButtonAtsijungti.Click();
             return this;
+        }*/
+
+
+
+
+
         }
-       */
-
-
-
-
-
-    }
 
 }
