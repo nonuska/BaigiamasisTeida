@@ -47,6 +47,59 @@ namespace BaigiamasisTeida.Test
 
 
         }
+        [Test]
+        
+        public void TestKamuoliukas10()
+        {
+           /* _teidaVisosPrekesPage5_1.NavigateToDefaultPage()
+              .ClickKamuoliukas10();
+            _teidaKamuoliukas10Page6.NavigateToDefaultPage()
+                .ClickButtonIKrepseli1();*/
+            _teidaKrepselisPage8.NavigateToDefaultPage()
+                .ClickButtonIstrynti();
+                //.ClickSumazinti1();
+        }
+
+        [Test]
+
+        public void TestPrekesKrepselis()
+
+        {
+          
+            _teidaVisosPrekesPage5_1.NavigateToDefaultPage()
+               
+            .ClickKamuoliukas10();
+            _teidaKamuoliukas10Page6.NavigateToDefaultPage()
+       
+             .ClickButtonIKrepseli1();
+            _teidaKrepselisPage8.NavigateToDefaultPage();
+            _teidaVisosPrekesPage5_1.NavigateToDefaultPage()
+            .ClickKamuoliukas8();
+            _teidaKamuoliukas8Page7.NavigateToDefaultPage()
+            .ClickButtonIKrepseli2();
+            _teidaKrepselisPage8.NavigateToDefaultPage();
+          
+        }
+
+        [Test]
+
+        public void TestIstryntiPrekes()
+        {
+            _teidaKamuoliukas8Page7.NavigateToDefaultPage()
+                .ClickButtonIKrepseli2();
+               
+            _teidaKrepselisPage8.NavigateToDefaultPage()
+                .ClickSumazinti1()
+                 .ClickSumazinti2();
+        }
+                
+                /*.ClickKamuoliukas10()
+                .ClickButtonIstrynti()
+                .ClickKamuoliukas8()
+                .ClickButtonIstrynti();*/
+            
+
+        
 
     }
 }

@@ -1,5 +1,6 @@
 ﻿using NUnit.Framework;
 using OpenQA.Selenium;
+using OpenQA.Selenium.Support.UI;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,12 +13,13 @@ namespace BaigiamasisTeida.Page
 
     {
         private const string PageAddressPagrindinis = "https://www.teida.lt/";
-        private IWebElement ButtonPagrindinisPrisijungti => Driver.FindElement(By.Id("prisijungti"));
-       // private IWebElement registruotas =>Driver.FindElement(By.Id("registerLink"));
-        // private IWebElement Cookies => Driver.FindElement(By.Id("___$_11__close ___$_11__close"));
 
-        //private IWebElement LaukeliIrasyti => Driver.FindElement(By.Id("searchParam"));
-        //private IWebElement PrekesPaieska => Driver.FindElement(By.Id("search_icon"));
+      //  private IWebElement popUp => Driver.FindElement(By.CssSelector("body > div.cc-window.cc-banner.cc-type-opt-in.cc-theme-block.cc-bottom.cc-color-override--1214213648 > div > a.cc-btn.cc-allow"));
+       // WebDriverWait wait = new WebDriverWait(Driver, TimeSpan.FromSeconds(10));
+
+
+        private IWebElement ButtonPagrindinisPrisijungti => Driver.FindElement(By.Id("prisijungti"));
+       
         public TeidaPagrindinisPage1(IWebDriver webdriver) : base(webdriver)   //kontruktorius
          { }  
         
@@ -50,22 +52,6 @@ namespace BaigiamasisTeida.Page
             ButtonPagrindinisPrisijungti.Click();
             return this;
         }
-        // KAIP TA ASSERT PARASYTI
-        /* public TeidaPagrindinisPage1 CheckButtonPsisijungti()
-         {
-
-             Assert.IsTrue(ButtonPagrindinisPrisijungti.Text.Contains(expectedResult), "Nepavyko prisijungti");
-             return this;
-         }
-        */
-
-       /* public TeidaPagrindinisPage1 CheckButtonAtsijungti()
-        {
-
-            OpenTeidaManoPaskyraPage3();
-            ButtonAtsijungti.Click();
-            return this;
-        }*/
 
 
 
