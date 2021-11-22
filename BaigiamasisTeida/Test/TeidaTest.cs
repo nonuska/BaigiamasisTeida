@@ -21,7 +21,8 @@ namespace BaigiamasisTeida.Test
         public void TestNewUserPrisijungimas(string elPastas, string slaptazodis)
         {
             _teidaPagrindinisPage1.NavigateToDefaultPage()
-            // pupOp() KAZKAIP APSIRASTTI
+            // .PopUp.Click();
+
             //AcceptCookie();
             .ClickButtonPagrindinisPrisijungti();
             _teidaPrisijungtiPage2.NavigateToDefaultPage()
@@ -38,9 +39,9 @@ namespace BaigiamasisTeida.Test
         [Test]
         public void TestAtsijungti()
         {
-            
+
             _teidaManoPaskyraPage3.NavigateToDefaultPage()
-                
+
             .ClickButtonAtsijungti();
             //_teidaPagrindinisPage1.NavigateToDefaultPage();
             _teidaPrisijungtiPage2.NavigateToDefaultPage();
@@ -48,16 +49,18 @@ namespace BaigiamasisTeida.Test
 
         }
         [Test]
-        
+
         public void TestKamuoliukas10()
         {
-           /* _teidaVisosPrekesPage5_1.NavigateToDefaultPage()
-              .ClickKamuoliukas10();
+            _teidaVisosPrekesPage5_1.NavigateToDefaultPage()
+               .ClickKamuoliukas10();
             _teidaKamuoliukas10Page6.NavigateToDefaultPage()
-                .ClickButtonIKrepseli1();*/
-            _teidaKrepselisPage8.NavigateToDefaultPage()
-                .ClickButtonIstrynti();
-                //.ClickSumazinti1();
+                .ClickButtonIKrepseli1()
+                .CheckKrepselisResult();
+           // _teidaKrepselisPage8.NavigateToDefaultPage()
+                //.ClickButtonIstrynti();
+
+            //.ClickSumazinti1();
         }
 
         [Test]
@@ -65,12 +68,12 @@ namespace BaigiamasisTeida.Test
         public void TestPrekesKrepselis()
 
         {
-          
+
             _teidaVisosPrekesPage5_1.NavigateToDefaultPage()
-               
+
             .ClickKamuoliukas10();
             _teidaKamuoliukas10Page6.NavigateToDefaultPage()
-       
+
              .ClickButtonIKrepseli1();
             _teidaKrepselisPage8.NavigateToDefaultPage();
             _teidaVisosPrekesPage5_1.NavigateToDefaultPage()
@@ -78,9 +81,9 @@ namespace BaigiamasisTeida.Test
             _teidaKamuoliukas8Page7.NavigateToDefaultPage()
             .ClickButtonIKrepseli2();
             _teidaKrepselisPage8.NavigateToDefaultPage();
-          
-        }
 
+        }
+        /*
         [Test]
 
         public void TestIstryntiPrekes()
@@ -89,7 +92,7 @@ namespace BaigiamasisTeida.Test
                 .ClickButtonIKrepseli2();
                
             _teidaKrepselisPage8.NavigateToDefaultPage()
-                .ClickSumazinti1()
+               .ClickSumazinti1()
                  .ClickSumazinti2();
         }
                 
@@ -97,7 +100,30 @@ namespace BaigiamasisTeida.Test
                 .ClickButtonIstrynti()
                 .ClickKamuoliukas8()
                 .ClickButtonIstrynti();*/
+    
+        
+        
+       
+        [Test]
+        public void TestKrepselis(string preke1)
+        {
+            _teidaPagrindinisPage1.NavigateToDefaultPage()
+                .InsertInputLaukelis("310.031")
+                .ClickPaieska()
+                .ClickKamuolys();
+            _kamuolysPage100.NavigateToDefaultPage()
+               .ClickKrepselis3()
+               .ClickPagrindinisKrepselis();
+            _krepselis101.NavigateToDefaultPage();
+
+
+
+        }
+
             
+        
+
+        
 
         
 

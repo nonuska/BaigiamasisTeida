@@ -20,7 +20,10 @@ namespace BaigiamasisTeida.Test
         public static TeidaKamuoliukas8Page7 _teidaKamuoliukas8Page7;
         public static TeidaKrepselisPage8 _teidaKrepselisPage8;
 
-       
+        public static KamuolysPage100 _kamuolysPage100;
+        public static Krepselis101 _krepselis101;
+
+
         // public static AlertPage _alertPage;
 
 
@@ -40,6 +43,9 @@ namespace BaigiamasisTeida.Test
             _teidaKamuoliukas10Page6 = new TeidaKamuoliukas10Page6(driver);
             _teidaKamuoliukas8Page7 = new TeidaKamuoliukas8Page7(driver);
             _teidaKrepselisPage8 = new TeidaKrepselisPage8(driver);
+
+            _kamuolysPage100 = new KamuolysPage100(driver);
+            _krepselis101 = new Krepselis101(driver);
 
             //_alertPage = new AlertPage(driver);
         }

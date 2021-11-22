@@ -60,6 +60,8 @@
     <Compile Include="Drivers\CustomDriver.cs" />
     <Compile Include="Page\AlertPage.cs" />
     <Compile Include="Page\BasePage.cs" />
+    <Compile Include="Page\KamuolysPage100.cs" />
+    <Compile Include="Page\Krepselis101.cs" />
     <Compile Include="Page\TeidaKamuoliukas8Page7.cs" />
     <Compile Include="Page\TeidaKojuMasazuokliaiPage5.cs" />
     <Compile Include="Page\TeidaKamuoliukas10Page6.cs" />

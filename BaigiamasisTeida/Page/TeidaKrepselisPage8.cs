@@ -36,10 +36,11 @@ namespace BaigiamasisTeida.Page
              return this;
          }*/
 
-         public TeidaKrepselisPage8 ClickKamuoliukas10()
+         public TeidaKrepselisPage8 CheckKamuoliukas10()
          {
+           
              kamuoliukas10.Click();
-             ;
+             
              return this;
 
          }

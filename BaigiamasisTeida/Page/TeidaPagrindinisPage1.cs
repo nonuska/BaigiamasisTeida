@@ -14,13 +14,19 @@ namespace BaigiamasisTeida.Page
     {
         private const string PageAddressPagrindinis = "https://www.teida.lt/";
 
-      //  private IWebElement popUp => Driver.FindElement(By.CssSelector("body > div.cc-window.cc-banner.cc-type-opt-in.cc-theme-block.cc-bottom.cc-color-override--1214213648 > div > a.cc-btn.cc-allow"));
+      //  private IWebElement PopUp => Driver.FindElement(By.CssSelector("body > div.cc-window.cc-banner.cc-type-opt-in.cc-theme-block.cc-bottom.cc-color-override--1214213648 > div > a.cc-btn.cc-allow"));
        // WebDriverWait wait = new WebDriverWait(Driver, TimeSpan.FromSeconds(10));
 
 
         private IWebElement ButtonPagrindinisPrisijungti => Driver.FindElement(By.Id("prisijungti"));
-       
-        public TeidaPagrindinisPage1(IWebDriver webdriver) : base(webdriver)   //kontruktorius
+
+        private IWebElement InputLaukelis => Driver.FindElement(By.Id("searchParam"));
+        private IWebElement InputLaukelis2 => Driver.FindElement(By.Id("searchParam"));
+        private IWebElement Paieska => Driver.FindElement(By.Id("search_icon"));
+        private IWebElement Paieska2 => Driver.FindElement(By.Id("search_icon"));
+        private IWebElement Kamuolys => Driver.FindElement(By.CssSelector("#search_div > table > tbody > tr > td.url > a"));
+
+        public TeidaPagrindinisPage1(IWebDriver webdriver) : base(webdriver)   //konstruktorius
          { }  
         
         public TeidaPagrindinisPage1 NavigateToDefaultPage()
@@ -53,10 +59,41 @@ namespace BaigiamasisTeida.Page
             return this;
         }
 
-
-
-
-
+        public TeidaPagrindinisPage1 InsertInputLaukelis(string preke1)
+        {
+            InputLaukelis.Clear();
+            InputLaukelis.SendKeys(preke1);
+            return this;
         }
+
+        public TeidaPagrindinisPage1 ClickPaieska()
+        {
+            Paieska.Click();
+            return this;
+        }
+
+        public TeidaPagrindinisPage1 InsertInputLaukelis2(string preke2)
+        {
+            InputLaukelis2.Clear();
+            InputLaukelis2.SendKeys(preke2);
+            return this;
+        }
+
+        public TeidaPagrindinisPage1 ClickPaieska2()
+        {
+            Paieska2.Click();
+            return this;
+        }
+
+        public TeidaPagrindinisPage1 ClickKamuolys()
+        {
+            Kamuolys.Click();
+            return this;
+        }
+
+
+
+
+    }
 
 }
